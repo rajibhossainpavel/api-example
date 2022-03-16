@@ -21,7 +21,7 @@ class Price extends Model
 		$minPrice=0.0;
 		$maxPrice=0.0;
 		foreach($lastDayPriceArray as $lastDayPrice){
-			if($minPrice>=$lastDayPrice['price']){
+			if($minPrice>=$lastDayPrice['price'] || $minPrice==0.0){
 				$minPrice=$lastDayPrice['price'];
 			}
 			if($maxPrice<=$lastDayPrice['price']){
